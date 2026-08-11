@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Maxwell Mobile's WiFi Only</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#">MAXWELL <span>MOBILE</span></a>
+  <div class="search"><input id="search" placeholder="Search phones, laptops..." aria-label="Search"><span>⌕</span></div>
+  <nav><a href="#shop">Shop</a><a href="#info">Info</a><a href="#contact">Contact</a></nav>
+  <button class="cart" id="cartButton" aria-label="Open shopping cart">🛒<b id="cartCount">0</b></button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">PREMIUM QUALITY • GREAT PRICES</div>
+    <h1>Maxwell<br>Mobile's<br><em>WiFi Only</em></h1>
+    <p>Phones, laptops and great deals — all in one place.</p>
+    <a class="cta" href="#shop">Shop now <span>→</span></a>
+  </div>
+
+  <div class="hero-visual">
+    <div class="glow"></div>
+    <img id="heroPhone" class="hero-phone" src="images/iphone-17-pro-max.jpg" alt="iPhone 17 Pro Max">
+    <div class="hero-shadow"></div>
+    <div class="hero-dots"><i class="active"></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<section class="benefits">
+  <article><span>✓</span><div><b>100% Original</b><small>Genuine products only.</small></div></article>
+  <article><span>↻</span><div><b>7 Days Return</b><small>Hassle free returns.</small></div></article>
+  <article><span>▣</span><div><b>Fast Delivery</b><small>Quick and reliable.</small></div></article>
+  <article><span>✦</span><div><b>Best Prices</b><small>Great prices always.</small></div></article>
+</section>
+
+<main id="shop">
+  <section class="shop-head">
+    <div class="eyebrow">BROWSE CATEGORIES</div>
+    <h2>Find what you need</h2>
+  </section>
+
+  <div class="category-cards">
+    <button class="category active" data-main="phones"><span class="cat-icon">📱</span><div><b>Phones</b><small>All smartphones</small></div><strong>→</strong></button>
+    <button class="category" data-main="laptops"><span class="cat-icon">💻</span><div><b>Laptops</b><small>Gaming and regular</small></div><strong>→</strong></button>
+  </div>
+
+  <div class="filters">
+    <div id="phoneSubs" class="subtabs">
+      <button class="sub active" data-sub="all-phones">All Phones</button>
+      <button class="sub" data-sub="wifi-iphone">WiFi Only iPhone</button>
+      <button class="sub" data-sub="iphone">iPhone</button>
+      <button class="sub" data-sub="android">Android</button>
+    </div>
+    <div id="laptopSubs" class="subtabs hidden">
+      <button class="sub active" data-sub="all-laptops">All Laptops</button>
+      <button class="sub" data-sub="gaming-laptop">Gaming Laptops</button>
+      <button class="sub" data-sub="regular-laptop">Regular Laptops</button>
+      <button class="sub" data-sub="Apple-laptop">Apple Laptops</button>
+    </div>
+    <select id="sort" aria-label="Sort products">
+      <option value="featured">Featured</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+      <option value="name">Name: A-Z</option>
+    </select>
+  </div>
+
+  <div id="products" class="products"></div>
+  <p id="empty" class="empty" hidden>No matching products.</p>
+</main>
+
+<section id="info" class="info">
+  <div class="eyebrow">WHY MAXWELL MOBILE</div>
+  <h2>Simple. Premium. Reliable.</h2>
+  <p>Browse phones and laptops, filter exactly what you want, and open any product for details.</p>
+</section>
+
+<section id="contact" class="contact">
+  <div><div class="eyebrow">MAXWELL MOBILE</div><h2>Ready to find your next device?</h2></div>
+  <a class="cta" href="#shop">Browse products →</a>
+</section>
+
+<aside id="cartPanel" class="cart-panel" aria-hidden="true">
+  <div class="cart-head"><div><div class="eyebrow">YOUR CART</div><h2>Shopping cart</h2></div><button id="cartClose" class="close cart-close" aria-label="Close cart">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom"><div class="cart-total"><span>Total</span><strong id="cartTotal">₦0</strong></div><button id="whatsappCheckout" class="cta wide">Order on WhatsApp <span>→</span></button><button id="clearCart" class="clear-cart">Clear cart</button></div>
+</aside>
+<div id="cartBackdrop" class="cart-backdrop"></div>
+
+<div id="modal" class="modal-wrap" aria-hidden="true">
+  <div class="modal">
+    <button id="close" class="close">×</button>
+    <img id="modalImg" alt="">
+    <div class="eyebrow">PRODUCT DETAILS</div>
+    <h2 id="modalName"></h2>
+    <p id="modalMeta"></p>
+    <strong id="modalPrice"></strong>
+    <button id="add" class="cta wide">Add to cart</button>
+  </div>
+</div>
+
+<footer>© 2026 Maxwell Mobile • WiFi Only</footer>
+<script src="script.js"></script>
+</body>
+</html>
